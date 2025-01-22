@@ -504,7 +504,7 @@ console.error(e)
 
 global.dfail = (type, m, conn) => {
 const msg = {
-rowner: '✧ *La función solicitada solo puede ser usada por*\n\n> ianalejandrook15x.', 
+rowner: '✧ *La función solicitada solo puede ser usada por el creador*', 
 owner: '✧ *Esta función solo puede ser usada por desarrolladores*.', 
 mods: '✧ *Esta función solo puede ser por moderadores.*', 
 premium: '✧ *Esta función solo esta disponible para usuario Premium.*', 
@@ -512,7 +512,7 @@ group: '✧ *La función solocitada solo puede ser ejecutada en grupos.*',
 private: '✧ *La función solo puede ser usada al chat privado del bot.*', 
 admin: '✧ *La función solo puede ser ejecutada por administradores.*', 
 botAdmin: '✧ *Para ejecutar esta función el bot debe ser administrador.*', 
-unreg: '✧ *No te encuentras regitrado, haga su registro*\n\n*/reg nombre.edad*\n\n*Ejemplo* : */reg Akari.14*',
+unreg: '✧ *No te encuentras regitrado*',
 restrict: '✧ *Esta característica esta desactivada.*'
 }[type];
 if (msg) return conn.reply(m.chat, msg, m, ).then(_ => m.react('✖️'))}
