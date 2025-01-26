@@ -31,8 +31,8 @@ let handler = async (m, { conn, args }) => {
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363344288629189@newsletter',
-          newsletterName: 'MULTI-BOT OCF 🌙',
+          newsletterJid: '120363392482966489@newsletter',
+          newsletterName: 'TANJIRO-AI 🌙',
           serverMessageId: -1
         }
       }
