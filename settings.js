@@ -34,8 +34,6 @@ global.author = 'Owner of the bot fede'
 global.dev = 'Owner of the bot fede'
 global.currency = 'Yenes'
 global.botStatus = true;
-global.welcome = '*Hola, bienvenido al grupo utiliza*\n\n> *.menu*\n*Para ver el menu del bot*'
-
 global.image = fs.readFileSync('./src/img/imagen.jpeg')
 global.avatar = fs.readFileSync('./src/img/avatar_contact.jpeg')
 
