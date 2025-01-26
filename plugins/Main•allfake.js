@@ -49,6 +49,15 @@ global.waitt = 'Espere un momento...'
 global.waittt = 'Espere un momento...'
 global.waitttt = 'Espere un momento...'
 
+var mensaje = '👋🏻 Hola bienvenido al grupo'  
+var mensaje2 = '👋🏻 Seas bievenido al grupo'
+var mensaje3 = '👋🏻 Nuevo integrante bienvenido'
+var grupo = 'https://chat.whatsapp.com/KaDy99ZsNbeE0pA9nc5FXK'
+
+global.redes = [mensaje, mensaje2, mensaje3].getRandom()
+
+global.redeshost = [grupo].getRandom()
+
 let category = "imagen"
 const db = './src/database/db.json'
 const db_ = JSON.parse(fs.readFileSync(db))
