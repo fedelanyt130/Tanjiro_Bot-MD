@@ -29,8 +29,8 @@ let handler = async (m, { conn, args }) => {
         forwardingScore: 2,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363318758721861@newsletter', 
-          newsletterName: '✦ ᥴᥲᥒᥲᥣ ძᥱ іᥲᥒᥲᥣᥱȷᥲᥒძr᥆᥆k15᥊', 
+          newsletterJid: '120363392482966489@newsletter', 
+          newsletterName: 'TANJIRO-AI', 
           serverMessageId: -1
         }
       }
