@@ -34,8 +34,8 @@ global.author = 'Owner of the bot fede'
 global.dev = 'Owner of the bot fede'
 global.currency = 'Yenes'
 global.botStatus = true;
-global.image = fs.readFileSync('./src/img/imagen.jpeg')
-global.avatar = fs.readFileSync('./src/img/avatar_contact.jpeg')
+global.image = fs.readFileSync('./src/img/imagen.jpg')
+global.avatar = fs.readFileSync('./src/img/avatar_contact.jpg')
 
 global.grupo = 'https://chat.whatsapp.com/DIcOu7REVCLJ3ZpknCwNpO'
 
