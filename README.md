@@ -142,6 +142,5 @@ href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" hei
 
 ### **`👑 Propietario`**
 <a
-href="https://github.com/federico130"><img src="https://github.com/The-King-ⁱᵃᵐ᭄𝐹ҽԃҽ࿐ཽ༵¹³𝚇.png" width="130" height="130" alt="
-ⁱᵃᵐ᭄𝐹ҽԃҽ࿐ཽ༵¹³𝚇"/>![17428534673741778707957245164734](https://github.com/user-attachments/assets/bc842542-f14b-443e-9fc5-120c313d8360)
-</a>
+href="https://github.com/federico130"><img src=(https://github.com/user-attachments/.png" width="130" height="130" alt="
+ⁱᵃᵐ᭄𝐹ҽԃҽ࿐ཽ༵¹³𝚇"/></a>
