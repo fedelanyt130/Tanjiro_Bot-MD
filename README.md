@@ -154,40 +154,6 @@ href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" hei
 
 </details>
 
----
-
-
-<details>
- <summary><b> 🌠 Servidor HostingPy</b></summary>
-
-* Dashboard  [`Dash`](https://dahs.hostingpy.shop)
-* Panel [`Panel`](https://panel.hostingpy.shop)
-* Canal de WhatsApp [`Canal Py`](https://whatsapp.com/channel/0029Vb3Grj27oQhbX4Bk0u1g)
-* Comunidad  [`Aquí`](https://chat.whatsapp.com/HnfmlRC5zXr11afTc5YQjE)
-* Contacto(s) [`Soporte`](https://wa.me/5491126852241)
-
-</details>
-
----
-
-
-<details>
- <summary><b>♣️ Servidor Bronxy-Hosting</b></summary>
-
-* Dashboard: [`Dash`](https://bronxyshost.com)
-* Panel: [`Panel`](https://bronxyshost.com)
-* Canal de WhatsApp: [`Canal Bronxy`](https://whatsapp.com/channel/0029Va9l48kHbFV6SQFKz93B)
-* Grupo Oficial: [`Aquí`](https://chat.whatsapp.com/GVQsAe6CAjoJLuotkpnAqq)
-* Grupo Soporte: [`Soporte`](https://wa.me/message/OMZQOH4YZ765K1) 
-
-</details>
-
----
-
-### **`🌟 Colaboradores`**
-<a href="https://github.com/federico130/YukiBot-MD/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=federico130"/></a>
-
 ### **`👑 Propietario`**
 <a
 href="https://github.com/federico130"><img src="https://github.com/The-King-ⁱᵃᵐ᭄𝐹ҽԃҽ࿐ཽ༵¹³𝚇.png" width="130" height="130" alt="
