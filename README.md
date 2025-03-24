@@ -1,6 +1,6 @@
 <h1 align="center">✦ TANJIRO-BOT-MD✦</h1>
 
- <img src= "https://gl/75t2mTXqmN14v4mC9">
+ <img src= "https://files.catbox.moe/om9jai.jpg">
     </p>
 
 ### **`❕️ Información importante`**
