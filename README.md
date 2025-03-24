@@ -83,7 +83,7 @@ npm start
 ❒ Abre Termux y navega al directorio del bot:
    
    ```bash
-    cd Tanjiro-Al
+    cd TANJIRO-BOT–MD
    ```
 
 ❒ Inicia el bot nuevamente:
@@ -97,7 +97,7 @@ npm start
 > Si después de instalar el bot en Termux y iniciar la session del bot (deseas poner tu número es la lista de owner pon este comando:
 
    ```bash
-    cd Tanjiro-Al && nano settings.js
+    cd TANJIRO-BOT–MD && nano settings.js
    ```
 
 </details>
