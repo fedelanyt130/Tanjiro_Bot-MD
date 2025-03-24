@@ -1,4 +1,4 @@
-<h1 align="center">✦ Tanjiro-Alƚ ✦</h1>
+<h1 align="center">✦ Tanjiro-Bot-MDƚ ✦</h1>
 
  <img src= "https://files.catbox.moe/om9jai.jpg">
     </p>
@@ -97,7 +97,7 @@ npm start
 > Si después de instalar el bot en Termux y iniciar la session del bot (deseas poner tu número es la lista de owner pon este comando:
 
    ```bash
-    cd Tanjiro-Al&& nano settings.js
+    cd Tanjiro-Al && nano settings.js
    ```
 
 </details>
@@ -137,20 +137,6 @@ href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" hei
 * Comunidad  [`Aquí`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
 * Contacto(s) [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
 * Discord [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
-
-</details>
-
----
-
-
-<details>
- <summary><b>💠 Servidor Akirax-Hosting</b></summary>
-
-* Dashboard: [`Dash`](https://home.akirax.net)
-* Panel: [`Panel`](https://console.akirax.net)
-* Canal de WhatsApp: [`Canal Akirax`](https://whatsapp.com/channel/0029Vb3Ocrs7IUYNQktqeE11)
-* Comunidad: [`Aquí`](https://chat.whatsapp.com/HekxzfoLBxN1TCwTmrlGcy)
-* Contacto(s): [`Matias`](https://Wa.me/+5491164123932) / [`Tesis`](https://wa.me/522431268546)
 
 </details>
 
