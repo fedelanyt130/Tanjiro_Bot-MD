@@ -1,6 +1,6 @@
-<h1 align="center">✦ Tanjiro-Bot-MD✦</h1>
+<h1 align="center">✦ TANJIRO-BOT-MD✦</h1>
 
- <img src= "https://images.app.goo.gl/75t2mTXqmN14v4mC9">
+ <img src= "https://gl/75t2mTXqmN14v4mC9">
     </p>
 
 ### **`❕️ Información importante`**
