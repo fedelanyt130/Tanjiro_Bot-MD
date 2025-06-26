@@ -43,7 +43,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     
     let sn = createHash('md5').update(m.sender).digest('hex')
     let regbot = `╭─ׅ─ׅ┈─๋︩︪──ׅ─ׅ┈─๋︩︪╮
-╭╼ REGISTROADO/A
+╭╼⚔ 𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗥 𝗔 𝗗 𝗢⚔ 
 ┃֪࣪╰─ׅ─ׅ┈─๋︩︪──ׅ─ׅ┈─๋︩︪╯\n`
     regbot += `✩≻──⋆♡⋆──✩\n`
     regbot += `*Nombre:* ${name}\n`
@@ -55,8 +55,8 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
         text: regbot,
         contextInfo: {
             externalAdReply: {
-                title: '💙 REGISTRADO•A 💙',
-                thumbnailUrl: 'https://files.catbox.moe/g8izji.jpg',
+                title: '⚔ REGISTRADO•A ⚔',
+                thumbnailUrl: 'https://files.catbox.moe/do8ghk.jpg',
                 mediaType: 1,
                 renderLargerThumbnail: true
             }
@@ -71,7 +71,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
                 showAdAttribution: true,                      
                 containsAutoReply: true,     
                 renderLargerThumbnail": true,
-                title: '💙 REGISTRADO•A 💙',  
+                title: '⚔ REGISTRADO•A ⚔',  
                 body: dev,  
                 containsAutoReply: true,
                 showAdAttribution: true,
