@@ -10,14 +10,14 @@ const clockString = ms => {
 const imagen = "https://files.catbox.moe/ltq7ph.jpg";
 
 const menuHeader = `
-╭─❒ 「 *📍 BARBOZA MD* 」
-│ 👤 *Nombre:* %name
-│ 🎖 *Nivel:* %level | *XP:* %exp/%max
-│ 🔓 *Límite:* %limit | *Modo:* %mode
-│ ⏱️ *Uptime:* %uptime
-│ 🌍 *Usuarios:* %total
-│ 🤖 *Bot optimizado para mejor rendimiento.*
-╰❒
+❒─「 *TANJIRO-BOT* 」─❒
+❒ 👤 *Nombre:* %name
+❒ 🎖 *Nivel:* %level | *XP:* %exp/%max
+❒ 🔓 *Límite:* %limit | *Modo:* %mode
+❒ ⏱️ *Uptime:* %uptime
+❒ 🌍 *Usuarios:* %total
+❒ 🤖 *Bot optimizado para mejor rendimiento.*
+
 `.trim();
 
 // Divisor de sección
@@ -28,7 +28,7 @@ const menuFooter = `
 ╭─❒ 「 *📌 INFO FINAL* 」
 │ ⚠️ *Usa los comandos con el prefijo correspondiente.*
 
-> Creado por Barboza-Team
+> Creado por fede
 ╰❒
 `.trim();
 
@@ -62,7 +62,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
       });
 
     const emojis = {
-      anime: "🎭",
+      anime: "💖",
       info: "ℹ️",
       search: "🔎",
       game: "🎮",
