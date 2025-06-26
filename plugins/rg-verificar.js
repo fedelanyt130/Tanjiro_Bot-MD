@@ -42,13 +42,13 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     }
     
     let sn = createHash('md5').update(m.sender).digest('hex')
-    let regbot = '🌙 𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗥 𝗔 𝗗 𝗢 🌙\n`
-    regbot += `────────\n`
-    regbot += `🌙 *Nombre:* ${name}\n`
-    regbot += `🌙 *Edad:* ${age} años\n`
-    regbot += '🌙 ${global.currency}* » 40\n
-    regbot += `🌙 *Experiencia* » 300\n`
-    regbot += `─────────\n`
+    let regbot = `╭─ׅ─ׅ┈─๋︩︪──ׅ─ׅ┈─๋︩︪╮
+╭╼ REGISTROADO/A
+┃֪࣪╰─ׅ─ׅ┈─๋︩︪──ׅ─ׅ┈─๋︩︪╯\n`
+    regbot += `✩≻──⋆♡⋆──✩\n`
+    regbot += `*Nombre:* ${name}\n`
+    regbot += `*Edad:* ${age} años\n`
+    regbot += `✩≻──⋆♡⋆──✩\n`
     regbot += `💖 usa *#menu* para los comandos.`
 
   await conn.sendMessage(m.chat, {
