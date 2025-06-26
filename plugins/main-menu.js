@@ -23,10 +23,10 @@ const sectionDivider = '╰────────────────╯';
 // Pie de página del menú
 const menuFooter = `
 ❒─「 * INFO FINAL* 」─❒
-❒ ⚠️ *Usa los comandos con el prefijo correspondiente.*
+❒ ⚔ *Usa los comandos con el prefijo correspondiente.*
 
 > Creado por fede
-─❒
+╰──────────❒
 `.trim();
 
 let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter here
@@ -65,7 +65,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
       game: "🎮",
       diversión: "🎉",
       subbots: "🤖",
-      rpg: "🌀",
+      rpg: "✨",
       registro: "📝",
       sticker: "🎨",
       imagen: "🖼️",
