@@ -22,11 +22,11 @@ const sectionDivider = '╰────────────────╯';
 
 // Pie de página del menú
 const menuFooter = `
-╭─❒ 「 *📌 INFO FINAL* 」
-│ ⚠️ *Usa los comandos con el prefijo correspondiente.*
+❒─「 * INFO FINAL* 」─❒
+❒ ⚠️ *Usa los comandos con el prefijo correspondiente.*
 
 > Creado por fede
-╰❒
+─❒
 `.trim();
 
 let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter here
@@ -85,7 +85,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
     const menuBody = Object.entries(categorizedCommands).map(([title, cmds]) => {
       const cleanTitle = title.toLowerCase().trim();
       const emoji = emojis[cleanTitle] || "⚔";
-      const entries = [...cmds].map(cmd => `│ ◦ _${_p}${cmd}_`).join('\n');
+      const entries = [...cmds].map(cmd => `│ ⚔ _${_p}${cmd}_`).join('\n');
       return `╭─「 ${emoji} *${title.toUpperCase()}* 」\n${entries}\n${sectionDivider}`;
     }).join('\n\n');
 
