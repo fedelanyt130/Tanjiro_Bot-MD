@@ -10,18 +10,15 @@ const clockString = ms => {
 const imagen = "https://files.catbox.moe/do8ghk.jpg";
 
 const menuHeader = `
-❒─「 *TANJIRO-BOT* 」─❒
+❒─「 *⚔TANJIRO-BOT⚔* 」─❒
 ❒ 👤 *Nombre:* %name
-❒ 🎖 *Nivel:* %level | *XP:* %exp/%max
-❒ 🔓 *Límite:* %limit | *Modo:* %mode
 ❒ ⏱️ *Uptime:* %uptime
 ❒ 🌍 *Usuarios:* %total
-❒ 🤖 *Bot optimizado para mejor rendimiento.*
 
 `.trim();
 
 // Divisor de sección
-const sectionDivider = '╰─────────────────╯';
+const sectionDivider = '╰────────────────╯';
 
 // Pie de página del menú
 const menuFooter = `
@@ -87,7 +84,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
 
     const menuBody = Object.entries(categorizedCommands).map(([title, cmds]) => {
       const cleanTitle = title.toLowerCase().trim();
-      const emoji = emojis[cleanTitle] || "📁";
+      const emoji = emojis[cleanTitle] || "⚔";
       const entries = [...cmds].map(cmd => `│ ◦ _${_p}${cmd}_`).join('\n');
       return `╭─「 ${emoji} *${title.toUpperCase()}* 」\n${entries}\n${sectionDivider}`;
     }).join('\n\n');
