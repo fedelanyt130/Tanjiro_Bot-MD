@@ -80,7 +80,7 @@ const pinterest = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 pinterest.help = ['pinterest <query>'];
-pinterest.tags = ['buscador', 'descargas'];
+pinterest.tags = ['Descargas'];
 pinterest.command = ['pinterest', 'pin']
 pinterest.register = true;
 pinterest.group = true;
