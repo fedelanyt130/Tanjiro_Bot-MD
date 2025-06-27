@@ -116,11 +116,8 @@ ${cmds.map(cmd => `✦ ${cmd}`).join('\n')}
 
   // Mensajes de espera variados
   let mensajesEspera = [
-    '⌜ ⊹ Espera tantito, espíritu curioso... ⊹ ⌟',
-    '✦ Invocando el menú mágico... ✦',
-    '🌸 Preparando algo especial para ti... 🌸',
-    '👻 Los espíritus están organizando todo... 👻',
-    '✨ Un momento, creando magia... ✨'
+    '⚔ Espera estoy algo lento en su menu...',
+    '⚔ Enviando su menu espere un momento...',
   ]
 
   // CONSTRUCCIÓN DEL MENÚ DINÁMICO
@@ -160,7 +157,7 @@ ${estiloSeleccionado.footer}
     contextInfo: {
       externalAdReply: {
         title: botname,
-        body: "Un amor que nunca se acaba Jeje <3",
+        body: " ᥆ᥕᥒᥱr ᥆𝖿 𝗍һᥱ ᑲ᥆𝗍 𝖿ᥱძᥱ",
         thumbnailUrl: `https://nightapi.is-a.dev/api/mayeditor?url=https://files.catbox.moe/xl6xgg.png&texto=¡Hola%20${encodeURIComponent(name)}!%20👻✨&textodireccion=Centro&fontsize=45&color=white&fontfamily=Comic%20Sans%20MS&shadow=true&outline=black`,
         sourceUrl: redes,
         mediaType: 1,
@@ -172,7 +169,7 @@ ${estiloSeleccionado.footer}
 
   // Lista de videos temáticos para más variedad
   let videosHanako = [
-    'https://files.catbox.moe/i74z9e.mp4',
+    'https://files.catbox.moe/4xx7di.mp4',
     // Puedes agregar más URLs de videos aquí
   ]
   let videoSeleccionado = videosHanako[Math.floor(Math.random() * videosHanako.length)]
@@ -186,8 +183,8 @@ ${estiloSeleccionado.footer}
       mentionedJid: [m.sender, userId],
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363372883715167@newsletter',
-        newsletterName: 'SoyMaycol <3',
+        newsletterJid: '120363420017244077@newsletter',
+        newsletterName: '᥆ᥕᥒᥱr ᥆𝖿 𝗍һᥱ ᑲ᥆𝗍 𝖿ᥱძᥱ',
         serverMessageId: -1,
       },
       forwardingScore: 999,
