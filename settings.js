@@ -30,8 +30,8 @@ global.jadi = 'JadiBot'
 
 global.banner = 'https://qu.ax/ECoeX.jpeg'
 global.botname = '𝗍ᥲᥒȷіr᥆_ᥲᥣ'
-global.author = 'Owner of the bot fede'
-global.dev = 'Owner of the bot fede'
+global.author = ' ᥆ᥕᥒᥱr ᥆𝖿 𝗍һᥱ ᑲ᥆𝗍 𝖿ᥱძᥱ'
+global.dev = ' ᥆ᥕᥒᥱr ᥆𝖿 𝗍һᥱ ᑲ᥆𝗍 𝖿ᥱძᥱ'
 global.currency = 'Yenes'
 global.botStatus = true;
 global.image = fs.readFileSync('./src/img/imagen.jpg')
