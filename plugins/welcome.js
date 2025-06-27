@@ -1,26 +1,41 @@
-import {WAMessageStubType} from '@whiskeysockets/baileys'
+import { WAMessageStubType } from '@whiskeysockets/baileys'
 import fetch from 'node-fetch'
 
-export async function before(m, {conn, participants, groupMetadata}) {
-  if (!m.messageStubType || !m.isGroup) return !0;
-    let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => welcome)
-    let pp2 = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => adios)
-  let img = await (await fetch(`${pp}`)).buffer()
-  let img2 = await (await fetch(`${pp2}`)).buffer()
+export async function before(m, { conn, participants, groupMetadata }) {
+  if (!m.messageStubType || !m.isGroup) return true
 
+  let who = m.messageStubParameters[0]
+  let taguser = `@${who.split('@')[0]}`
   let chat = global.db.data.chats[m.chat]
+  let defaultImage = 'https://files.catbox.moe/h1eizu.jpg';
 
- if (chat.welcome && m.messageStubType == 27) {
-    let welcome = ` 🍃 TANJIRO-AI \n「 Bienvenido 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Bienvenido/a 」\n「 ${groupMetadata.subject} 」\n\n`
-await conn.sendMini(m.chat, botname, dev, welcome, img, img, fkontak)
+  if (chat.welcome) {
+    let img;
+    try {
+      let pp = await conn.profilePictureUrl(who, 'image');
+      img = await (await fetch(pp)).buffer();
+    } catch {
+      img = await (await fetch(defaultImage)).buffer();
+    }
+
+    if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
+      let bienvenida = `┏━〔 *ʙɪᴇɴᴠᴇɴɪᴅᴏ/ᴀ* 〕━┓
+┃ ❐ Usuario: ${taguser}
+┃ ❐ Grupo: *${groupMetadata.subject}*
+┃
+┃ ✨ ¡Pásala genial con todos!
+┗━━━━━━━━━━━━━━━━━━┛`
+      await conn.sendMessage(m.chat, { image: img, caption: bienvenida, mentions: [who] })
+    } else if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE || m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE) {
+      let bye = `┏━〔 *ʜᴀꜱᴛᴀ ʟᴜᴇɢᴏ* 〕━┓
+┃ ❐ Usuario: ${taguser}
+┃ ❐ Grupo: *${groupMetadata.subject}*
+┃
+┃ ¡Hasta luego no te extrañaremos!
+┗━━━━━━━━━━━━━━━━━━┛`
+      await conn.sendMessage(m.chat, { image: img, caption: bye, mentions: [who] })
+    }
   }
 
-  if (chat.welcome && m.messageStubType == 28) {
-    let bye = ` 🍃 TANJIRO-AI \n「 Adios 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Sҽ ϝυҽ 」\n「 Nunca te quisimos aqui 」\n\n`
-await conn.sendMini(m.chat, botname, dev, bye, img, img, fkontak)
-  }
-
-  if (chat.welcome && m.messageStubType == 32) {
-    let kick = ` 🍃 TANJIRO-AI \n「 Adios 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Sҽ ϝυҽ 」\n「 Nunca te quisimos aqui 」\n\n
-await conn.sendMini(m.chat, botname, dev, kick, img, img, fkontak)
-}}
+  return true
+                                                                            }
