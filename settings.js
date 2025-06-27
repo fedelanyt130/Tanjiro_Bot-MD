@@ -28,7 +28,7 @@ global.nameqr = '𝗍ᥲᥒȷіr᥆_ᥲᥣ'
 global.sessions = 'BotSession'
 global.jadi = 'JadiBot'
 
-global.banner = 'https://qu.ax/ECoeX.jpeg'
+global.banner = 'https://files.catbox.moe/7z2ayh.jpg'
 global.botname = '𝗍ᥲᥒȷіr᥆_ᥲᥣ'
 global.author = ' ᥆ᥕᥒᥱr ᥆𝖿 𝗍һᥱ ᑲ᥆𝗍 𝖿ᥱძᥱ'
 global.dev = ' ᥆ᥕᥒᥱr ᥆𝖿 𝗍һᥱ ᑲ᥆𝗍 𝖿ᥱძᥱ'
