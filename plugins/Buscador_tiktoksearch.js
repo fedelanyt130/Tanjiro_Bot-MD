@@ -100,7 +100,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
 
 handler.help = ["tiktoksearch <txt>"];
 handler.register = true
-handler.group = true
+handler.group = false
 handler.tags = ["buscador"];
 handler.command = ["tiktoksearch", "ttss", "tiktoks"];
 
