@@ -41,55 +41,6 @@ ${cmds.map(cmd => `┊ ➤ ${cmd}`).join('\n')}
       footer: `⋘ ──── ∗ ⋅◈⋅ ∗ ──── ⋙`
     },
 
-    // Estilo 2: Místico
-    {
-      header: `⚔ *TANJIRO-Al* ⚔`,
-      userSection: `⚘ ${name} ⚘\n✦ *_${saludo}_*`,
-      infoTitle: `⚔ INFO BOT X USUARIO ⚔`,
-      categoryStyle: (tag, cmds, emoji) => `
-⟬ ${emoji} ${tag} ${emoji} ⟭
-${cmds.map(cmd => `◦ ${cmd}`).join('\n')}
-﹌﹌﹌﹌﹌﹌﹌﹌`,
-      footer: `✧ ─══════════════─ ✧`
-    },
-
-    // Estilo 3: Kawaii
-    {
-      header: `♡⸜(˶˃ ᵕ ˂˶)⸝♡ 𝙷𝚊𝚗𝚊𝚔𝚘 𝙱𝚘𝚝 ♡⸜(˶˃ ᵕ ˂˶)⸝♡`,
-      userSection: `૮ ˶ᵔ ᵕ ᵔ˶ ა ${name} ♡\n*_${saludo}_* (⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)`,
-      infoTitle: `꒰ ♡ 𝙸𝙽𝙵𝙾 𝙳𝙴 𝙽𝚄𝙴𝚂𝚃𝚁𝙾 𝙰𝙼𝙾𝚁 ♡ ꒱`,
-      categoryStyle: (tag, cmds, emoji) => `
-╭─ ${emoji} ${tag} ${emoji} ─╮
-${cmds.map(cmd => `│ ♡ ${cmd}`).join('\n')}
-╰─────────────╯`,
-      footer: `♡ ∩───∩ ♡ ∩───∩ ♡`
-    },
-
-    // Estilo 4: Gótico Elegante
-    {
-      header: `▁ ▂ ▄ ▅ ▆ ▇ █ 𝙷𝚊𝚗𝚊𝚔𝚘 𝙱𝚘𝚝 █ ▇ ▆ ▅ ▄ ▂ ▁`,
-      userSection: `⌈ ${name} ⌉\n⟨ *_${saludo}_* ⟩`,
-      infoTitle: `▰▱▰▱ 𝙸𝙽𝙵𝙾 𝙴𝚂𝙿𝙸𝚁𝙸𝚃𝚄𝙰𝙻 ▰▱▰▱`,
-      categoryStyle: (tag, cmds, emoji) => `
-▲ ${tag} ${emoji} ▲
-${cmds.map(cmd => `▸ ${cmd}`).join('\n')}
-▼▼▼▼▼▼▼▼▼▼`,
-      footer: `━━━━━━━━━━━━━━━━━━━━━━━━━`
-    },
-
-    // Estilo 5: Dreamy
-    {
-      header: `･ﾟ✧*:･ﾟ✧ 𝚂𝚞𝚖𝚘𝚗 𝙷𝚊𝚗𝚊𝚔𝚘 ✧･ﾟ: *✧･ﾟ`,
-      userSection: `☾ ⋆*･ﾟ ${name} ･ﾟ*⋆ ☽\n～ *_${saludo}_* ～`,
-      infoTitle: `⋆｡‧˚ʚ 𝙸𝙽𝙵𝙾 𝙼Á𝙶𝙸𝙲𝙰 ɞ˚‧｡⋆`,
-      categoryStyle: (tag, cmds, emoji) => `
-⊹ ࣪ ˖ ${emoji} ${tag} ${emoji} ˖ ࣪ ⊹
-${cmds.map(cmd => `✦ ${cmd}`).join('\n')}
-˚ ༘♡ ⋆｡˚ ❀ ˚ ༘♡ ⋆｡˚`,
-      footer: `ੈ✩‧₊˚ ੈ✩‧₊˚ ੈ✩‧₊˚`
-    }
-  ]
-
   // Seleccionar estilo aleatorio
   let estiloSeleccionado = estilosMenu[Math.floor(Math.random() * estilosMenu.length)]
 
@@ -116,11 +67,7 @@ ${cmds.map(cmd => `✦ ${cmd}`).join('\n')}
 
   // Mensajes de espera variados
   let mensajesEspera = [
-    '⌜ ⊹ Espera tantito, espíritu curioso... ⊹ ⌟',
-    '✦ Invocando el menú mágico... ✦',
     '🌸 Preparando algo especial para ti... 🌸',
-    '👻 Los espíritus están organizando todo... 👻',
-    '✨ Un momento, creando magia... ✨'
   ]
 
   // CONSTRUCCIÓN DEL MENÚ DINÁMICO
