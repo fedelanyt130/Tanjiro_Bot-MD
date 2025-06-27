@@ -7,7 +7,7 @@ const clockString = ms => {
   return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':');
 };
 
-const imagen = "https://files.catbox.moe/do8ghk.jpg";
+const imagen = "https://files.catbox.moe/x4vez4.jpg";
 
 const menuHeader = `
 ❒─「 *⚔TANJIRO-BOT⚔* 」─❒
