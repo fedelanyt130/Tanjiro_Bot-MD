@@ -27,14 +27,11 @@ let handler = async (m, { conn, args }) => {
   let periodoSaludo = hour < 6 ? 'madrugada' : hour < 12 ? 'mañana' : hour < 18 ? 'tarde' : 'noche'
   let saludo = saludos[periodoSaludo][Math.floor(Math.random() * saludos[periodoSaludo].length)]
 
-  // Múltiples estilos de decoración
-  let estilosMenu = [
-    // Estilo 1: Clásico Hanako
-    {
-      header: `╭═══❖ 𝓗𝓪𝓷𝓪𝓴𝓸 𝓑𝓸𝓽 ❖═══╮`,
+  let menu = '
+      header: `╭═══❖ TANJIRO-Al❖═══╮`,
       userSection: `┊ ｡ﾟ☆: *.${name}.* :☆ﾟ｡\n┊ *_${saludo}_*`,
       infoTitle: `╰═══❖ 𝓘𝓷𝓯𝓸 𝓓𝓮𝓵 𝓢𝓾𝓶𝓸𝓷 ❖═══╯`,
-      categoryStyle: (tag, cmds, emoji) => `
+      categoryStyle: ⚔`
       footer: `⋘ ──── ∗ ⋅◈⋅ ∗ ──── ⋙`
     },
 
