@@ -27,7 +27,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 ╰──────────╯
 `;
 
-            await conn.sendFile(m.chat, videoURL, "tiktok.mp4", `${info}\n🌙 ¡Aquí tienes tu video de tiktok!\n⚡ ¡Atrápalo ya!`, m);
+            await conn.sendFile(m.chat, videoURL, "tiktok.mp4", `${info}\n🌙 ¡Aquí tienes tu video de tiktok!`, m);
         } else {
             return conn.reply(m.chat, "❌ No se pudo descargar el video. Inténtalo más tarde.", m);
         }
