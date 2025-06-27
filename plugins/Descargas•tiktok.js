@@ -3,7 +3,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) return m.reply(`🌸 Ingresa el enlace de un video de TikTok.\n\n📌 *Ejemplo:*\n${usedPrefix + command} https://vm.tiktok.com/xxxxxx`);
+  if (!text) return m.reply(`⚔ Ingresa el enlace de un video de TikTok.\n\n📌 *Ejemplo:*\n${usedPrefix + command} https://vm.tiktok.com/xxxxxx`);
 
   try {
     await m.react('🎴');
