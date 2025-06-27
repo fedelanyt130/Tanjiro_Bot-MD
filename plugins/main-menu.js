@@ -43,14 +43,14 @@ ${cmds.map(cmd => `┊ ➤ ${cmd}`).join('\n')}
 
     // Estilo 2: Místico
     {
-      header: `✧･ﾟ: *✧･ﾟ:* 𝙷𝚊𝚗𝚊𝚔𝚘 𝙱𝚘𝚝 *:･ﾟ✧*:･ﾟ✧`,
-      userSection: `◦ •●◉✿ ${name} ✿◉●• ◦\n✦ *_${saludo}_*`,
-      infoTitle: `◤ ◥ ◣ ◢ 𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝙴𝚂𝙿𝙸𝚁𝙸𝚃𝚄 ◤ ◥ ◣ ◢`,
+      header: `⚔ *TANJIRO-Al* ⚔`,
+      userSection: `⚘ ${name} ⚘\n✦ *_${saludo}_*`,
+      infoTitle: `⚔ INFO BOT X USUARIO ⚔`,
       categoryStyle: (tag, cmds, emoji) => `
 ⟬ ${emoji} ${tag} ${emoji} ⟭
 ${cmds.map(cmd => `◦ ${cmd}`).join('\n')}
 ﹌﹌﹌﹌﹌﹌﹌﹌`,
-      footer: `✧ ─═══════════════─ ✧`
+      footer: `✧ ─══════════════─ ✧`
     },
 
     // Estilo 3: Kawaii
