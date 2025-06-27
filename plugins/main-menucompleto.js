@@ -112,6 +112,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
     conn.reply(m.chat, '⚠️ Ocurrió un error al generar el menú. Por favor, inténtalo de nuevo más tarde o contacta al soporte.', m); // Removed rcanal here
   }
 };
-handler.command = ['menu', 'help', 'menú'];
+handler.command = ['menucompleto'];
 
 export default handler;
