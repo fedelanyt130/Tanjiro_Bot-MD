@@ -2,7 +2,7 @@
 
 const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   if (!args[0]) {
-    return conn.reply(m.chat, `*${xdownload} Por favor, ingresa un link de Facebook.*`, fkontak, m);
+    return conn.reply(m.chat, `*${xdownload} Por favor, ingresa un link de Facebook.*`, fkontak, m, rcanal');
   }
 
   await m.react('🕒');
@@ -28,20 +28,7 @@ const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   if (!data) {
     return conn.reply(m.chat, '*⚠️ No se encontró una resolución adecuada.*', m);
   }
-  
-await conn.sendMessage(m.chat, {
-      video: { url: download },
-      caption: `✦ *${botname}*`, 
-      contextInfo: {
-        forwardingScore: 2,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363392482966489@newsletter', 
-          newsletterName: 'TANJIRO-AI', 
-          serverMessageId: -1
-        }
-      }
-    }, { quoted: m });
+
   await m.react('✅');
   let video = data.url;
   
