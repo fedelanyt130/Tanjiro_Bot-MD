@@ -7,7 +7,7 @@ const clockString = ms => {
   return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':');
 };
 
-const video = "https://files.catbox.moe/4xx7di.mp4";
+const imagen = "https://files.catbox.moe/x4vez4.jpg";
 
 const menuHeader = `
 ❒─「 *⚔TANJIRO-BOT⚔* 」─❒
@@ -102,7 +102,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
     const fullMenu = `${finalHeader}\n\n${menuBody}\n\n${menuFooter}`;
 
     await conn.sendMessage(m.chat, {
-      vid: { url: video },
+      image: { url: imagen },
       caption: fullMenu,
       mentions: [m.sender]
     }, { quoted: m });
