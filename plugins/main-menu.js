@@ -102,7 +102,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
     const fullMenu = `${finalHeader}\n\n${menuBody}\n\n${menuFooter}`;
 
     await conn.sendMessage(m.chat, {
-      image: { url: imagen },
+      vid: { url: video },
       caption: fullMenu,
       mentions: [m.sender]
     }, { quoted: m });
