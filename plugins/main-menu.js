@@ -11,8 +11,6 @@ const imagen = "https://files.catbox.moe/x4vez4.jpg";
 
 const menuHeader = `
 ❒─「 *⚔TANJIRO-BOT⚔* 」─❒
-❒ 💻 *Sistema:* Multi-Device
-❒ ⌛ *hora:* ${hour}
 ❒ 👤 *Nombre:* %name
 ❒ ⏱️ *Uptime:* %uptime
 ❒ 🌍 *Usuarios:* %total
@@ -20,7 +18,7 @@ const menuHeader = `
 `.trim();
 
 // Divisor de sección
-const sectionDivider = '╰══════╯';
+const sectionDivider = '╰────────────────❒';
 
 // Pie de página del menú
 const menuFooter = `
@@ -88,7 +86,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
       const cleanTitle = title.toLowerCase().trim();
       const emoji = emojis[cleanTitle] || "⚔";
       const entries = [...cmds].map(cmd => `│ ⚔ _${_p}${cmd}_`).join('\n');
-      return `╭═══⚔ ${emoji} *${title.toUpperCase()}* ⚔═══╮\n${entries}\n${sectionDivider}`;
+      return `╭─「 ${emoji} *${title.toUpperCase()}* 」─❒\n${entries}\n${sectionDivider}`;
     }).join('\n\n');
 
     const finalHeader = menuHeader
