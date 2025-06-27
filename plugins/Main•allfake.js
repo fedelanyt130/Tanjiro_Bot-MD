@@ -31,11 +31,11 @@ let who = m.messageStubParameters[0] + '@s.whatsapp.net'
 let user = global.db.data.users[who]
 let pushname = m.pushName || 'Sin nombre'
 
-global.creador = 'Wa.me/546561105057'
+global.creador = 'Wa.me/5491156178758'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.asistencia = 'https://wa.me/5493876639332'
-global.namechannel = 'TANJIRO-AI'
-global.id = "120363268849510279@g.us"
+global.asistencia = 'https://wa.me/5491156178758'
+global.namechannel = '⚔ 𝗍ᥲᥒȷіr᥆_ᥲᥣ ⚔'
+global.id = "120363399965479175@g.us"
 global.rwait = '🕒'
 global.done = '✅'
 global.error = '✖️'
