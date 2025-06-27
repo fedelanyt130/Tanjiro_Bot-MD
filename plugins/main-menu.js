@@ -35,14 +35,8 @@ let handler = async (m, { conn, args }) => {
       userSection: `┊ ｡ﾟ☆: *.${name}.* :☆ﾟ｡\n┊ *_${saludo}_*`,
       infoTitle: `╰═══❖ 𝓘𝓷𝓯𝓸 𝓓𝓮𝓵 𝓢𝓾𝓶𝓸𝓷 ❖═══╯`,
       categoryStyle: (tag, cmds, emoji) => `
-╭─━━━ ${emoji} ${tag} ${emoji} ━━━╮
-${cmds.map(cmd => `┊ ➤ ${cmd}`).join('\n')}
-╰─━━━━━━━━━━━━━━━━╯`,
       footer: `⋘ ──── ∗ ⋅◈⋅ ∗ ──── ⋙`
     },
-
-  // Seleccionar estilo aleatorio
-  let estiloSeleccionado = estilosMenu[Math.floor(Math.random() * estilosMenu.length)]
 
   // Agrupar comandos por categorías
   let categories = {}
@@ -74,17 +68,11 @@ ${cmds.map(cmd => `┊ ➤ ${cmd}`).join('\n')}
   let menuText = `
 ${estiloSeleccionado.header}
 
-${estiloSeleccionado.userSection}
-
-${estiloSeleccionado.infoTitle}
-
 💻 Sistema: Multi-Device
 👤 Espíritu: @${userId.split('@')[0]}
 ⏰ Tiempo activo: ${uptime}
 👥 Espíritus: ${totalreg} espíritus
 ⌚ Hora: ${hour}
-
-${estiloSeleccionado.footer}
 
 > Hecho con amor por: *_SoyMaycol_* (⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤
 `.trim()
