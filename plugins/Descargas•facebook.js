@@ -10,7 +10,7 @@ const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   try {
     res = await igdl(args[0]);
   } catch (error) {
-    return conn.reply(m.chat, '*❌ Error al obtener el video, verifique que el enlace sea correcto*', m);
+    return conn.reply(m.chat, '*❌ Error al obtener el video, verifique que el enlace sea correcto*', m, rcanal,');
   }
 
   let result = res.data;
@@ -33,7 +33,7 @@ const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   let video = data.url;
   
   try {
-    await conn.sendMessage(m.chat, { video: { url: video }, caption: '\`\`\`◜Facebook - Download◞\`\`\`\n\n> © Powered by asuna_Bot-Al\n> Video downloaded', fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: fkontak });
+    await conn.sendMessage(m.chat, { video: { url: video }, caption: '\`\`\`◜Facebook - Download◞\`\`\`\n\n> © Powered by Tanjiro_Al\n> Video downloaded', fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: fkontak });
   } catch (error) {
     return conn.reply(m.chat, '*⚠️ La URL está corrupta, intenta con otra URL.*', m);
   await m.react('❌');
