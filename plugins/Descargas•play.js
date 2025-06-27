@@ -1,142 +1,168 @@
-import fetch from 'node-fetch';
+import yts from "yt-search";
+import { ytv, yta } from "@soymaycol/maytube";
 
-let handler = async (m, { conn, args }) => {
-  let username = m.pushName || 'User';
-  let pp = 'https://qu.ax/hMOxx.jpg';
-  let thumbnail = await (await fetch(pp)).buffer();
+const limit = 100; // MB
 
-  if (!args[0]) {
-    let txt = `✨ *Ingresa el nombre de lo que quieres buscar*`;
+const handler = async (m, { conn, text, command }) => {
+  if (!text) return m.reply("> Ingresa el nombre de un video o una URL de YouTube.");
 
-    const anu = {
-      key: {
-        fromMe: false,
-        participant: "0@s.whatsapp.net",
-        remoteJid: "0@s.whatsapp.net"
-      },
-      message: {
-        groupInviteMessage: {
-          groupJid: "6285240750713-1610340626@g.us",
-          inviteCode: "mememteeeekkeke",
-          groupName: "P",
-          caption: "${botname}",
-          jpegThumbnail: thumbnail
-        }
-      }
-    };
+  await m.react("🕛");
 
-    return conn.sendMessage(m.chat, {
-      text: txt,
-      contextInfo: {
-        forwardingScore: 999,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363392482966489@newsletter',
-          newsletterName: 'TANJIRO-AI 🌙',
-          serverMessageId: -1
-        }
-      }
-    }, { quoted: anu });
-  }
-
-  await m.react('✅');
+  console.log("🔍 Buscando en YouTube...");
+  
   try {
-    let query = args.join(" ");
-    let searchApiResponse = await fetch(`https://restapi.apibotwa.biz.id/api/search-yts?message=${encodeURIComponent(query)}`);
-    let searchResults = await searchApiResponse.json();
+    let res = await yts(text);
 
-    if (!searchResults.status || !searchResults.data || !searchResults.data.response || !searchResults.data.response.video || !searchResults.data.response.video.length) {
-      const anu = {
-        key: {
-          fromMe: false,
-          participant: "0@s.whatsapp.net",
-          remoteJid: "0@s.whatsapp.net"
-        },
-        message: {
-          groupInviteMessage: {
-            groupJid: "6285240750713-1610340626@g.us",
-            inviteCode: "mememteeeekkeke",
-            groupName: "P",
-            caption: "No se encontraron resultados",
-            jpegThumbnail: thumbnail
-          }
-        }
-      };
-
-      return conn.sendMessage(m.chat, {
-        text: `No se encontraron resultados, ${username}.`,
-        quoted: anu
-      }, { quoted: anu }).then(_ => m.react('✖️'));
+    // Validación mejorada de resultados
+    if (!res || !res.all || !Array.isArray(res.all) || res.all.length === 0) {
+      return m.reply("❌ No se encontraron resultados para tu búsqueda.");
     }
 
-    let video = searchResults.data.response.video[0];
-    let videoImg = await (await fetch(video.thumbnail)).buffer();
+    let video = res.all[0];
+    
+    // Validaciones de las propiedades del video
+    if (!video) {
+      return m.reply("❌ No se pudo obtener información del video.");
+    }
 
-    let txt = `*\`D E S C A R G A S\`*\n\n`;
-    txt += `🌙 *\`Título:\`* ${video.title}\n`;
-    txt += `🌙 *\`Duración:\`* ${parseDuration(video.duration)}\n`;
-    txt += `🌙 *\`Canal:\`* ${video.authorName || 'Desconocido'}\n`;
-    txt += `🌙 *\`Url:\`* ${video.url}\n\n`;
+    // Validación segura de duración
+    let durationSeconds = 0;
+    let durationTimestamp = "Desconocida";
+    
+    if (video.duration) {
+      durationSeconds = Number(video.duration.seconds) || 0;
+      durationTimestamp = video.duration.timestamp || "Desconocida";
+    }
 
-    await conn.sendMessage(m.chat, {
-      image: videoImg,
-      caption: txt,
-      footer: 'Selecciona una opción',
-      buttons: [
-        {
-          buttonId: `.ytdlmp4 ${video.url}`,
-          buttonText: {
-            displayText: '🌙 Video',
-          },
-        },
-        {
-          buttonId: `.ytdlmp3 ${video.url}`,
-          buttonText: {
-            displayText: '🌙 Audio',
-          },
-        },
-      ],
-      viewOnce: true,
-      headerType: 4,
-    }, { quoted: m });
+    // Validación segura de otras propiedades
+    const authorName = video.author?.name || "Desconocido";
+    const title = video.title || "Sin título";
+    const views = video.views || "Desconocidas";
+    const url = video.url || "";
+    const thumbnail = video.thumbnail || "";
 
-    await m.react('✅');
-  } catch (e) {
-    console.error('Error en el handler:', e);
-    await m.react('✖️');
+    // Mensaje único con información y estado de descarga
+    const processingMessage = `*「❀」${title}*
+> *✧ Canal:* ${authorName}
+> *✧ Duración:* ${durationTimestamp}
+> *✧ Vistas:* ${views}
 
-    const anu = {
-      key: {
-        fromMe: false,
-        participant: "0@s.whatsapp.net",
-        remoteJid: "0@s.whatsapp.net"
-      },
-      message: {
-        groupInviteMessage: {
-          groupJid: "6285240750713-1610340626@g.us",
-          inviteCode: "mememteeeekkeke",
-          groupName: "P",
-          caption: "Error al buscar el video",
-          jpegThumbnail: thumbnail
-        }
+⏳ *Descargando...* Espera un momento.`;
+
+    // Enviar información del video con miniatura (si existe)
+    let sentMessage;
+    if (thumbnail) {
+      try {
+        sentMessage = await conn.sendFile(m.chat, thumbnail, "thumb.jpg", processingMessage, m);
+      } catch (thumbError) {
+        console.log("⚠️ No se pudo enviar la miniatura:", thumbError.message);
+        sentMessage = await m.reply(processingMessage);
       }
-    };
+    } else {
+      sentMessage = await m.reply(processingMessage);
+    }
 
-    conn.sendMessage(m.chat, {
-      text: `Error al buscar el video, ${username}. Verifica la consulta o inténtalo de nuevo.`,
-      quoted: anu
-    }, { quoted: anu });
+    // Proceder con la descarga según el comando
+    if (command === "play" || command === "playaudio" || command === "ytmp3") {
+      await downloadAudio(conn, m, video, title);
+    } else if (command === "play2" || command === "playvid" || command === "ytv" || command === "ytmp4") {
+      await downloadVideo(conn, m, video, title);
+    }
+
+  } catch (error) {
+    console.error("❌ Error general:", error);
+    await m.reply(`❌ Hubo un error al procesar tu solicitud:\n\n${error.message}`);
+    await m.react("❌");
   }
 };
 
-handler.help = ['play *<texto>*'];
-handler.tags = ['dl'];
-handler.command = ['play', 'play2'];
-handler.register = true
+// Función para descargar audio
+const downloadAudio = async (conn, m, video, title) => {
+  try {
+    console.log("🎧 Solicitando audio...");
+    
+    const api = await yta(video.url);
+    
+    // Validar respuesta de la API
+    if (!api || !api.status || !api.result || !api.result.download) {
+      throw new Error("No se pudo obtener el enlace de descarga del audio");
+    }
+    
+    console.log("🎶 Enviando audio...");
+    await conn.sendFile(
+      m.chat, 
+      api.result.download, 
+      `${(api.result.title || title).replace(/[^\w\s]/gi, '')}.mp3`, 
+      `🎵 *${api.result.title || title}*`, 
+      m
+    );
+    
+    await m.react("✅");
+    console.log("✅ Audio enviado exitosamente");
+
+  } catch (error) {
+    console.error("❌ Error descargando audio:", error);
+    await m.reply(`❌ Error al descargar el audio:\n\n${error.message}`);
+    await m.react("❌");
+  }
+};
+
+// Función para descargar video
+const downloadVideo = async (conn, m, video, title) => {
+  try {
+    console.log("📹 Solicitando video...");
+    
+    const api = await ytv(video.url);
+    
+    // Validar respuesta de la API
+    if (!api || !api.url) {
+      throw new Error("No se pudo obtener el enlace de descarga del video");
+    }
+
+    // Verificar tamaño del archivo
+    let sizemb = 0;
+    try {
+      const res = await fetch(api.url, { method: 'HEAD' });
+      const cont = res.headers.get('content-length');
+      if (cont) {
+        const bytes = parseInt(cont, 10);
+        sizemb = bytes / (1024 * 1024);
+      }
+    } catch (sizeError) {
+      console.log("⚠️ No se pudo obtener el tamaño del archivo:", sizeError.message);
+    }
+
+    if (sizemb > limit && sizemb > 0) {
+      return m.reply(`🚫 El archivo es muy pesado (${sizemb.toFixed(2)} MB). El límite es ${limit} MB. Intenta con un video más corto 🥲`);
+    }
+
+    const doc = sizemb >= limit && sizemb > 0;
+    
+    console.log("🎥 Enviando video...");
+    await conn.sendFile(
+      m.chat, 
+      api.url, 
+      `${(api.title || title).replace(/[^\w\s]/gi, '')}.mp4`, 
+      `📹 *${api.title || title}*`, 
+      m, 
+      null, 
+      {
+        asDocument: doc,
+        mimetype: "video/mp4",
+      }
+    );
+    
+    await m.react("✅");
+    console.log("✅ Video enviado exitosamente");
+
+  } catch (error) {
+    console.error("❌ Error descargando video:", error);
+    await m.reply(`❌ Error al descargar el video:\n\n${error.message}`);
+    await m.react("❌");
+  }
+};
+
+handler.command = handler.help = ['play', 'playaudio', 'ytmp3', 'play2', 'ytv', 'ytmp4'];
+handler.tags = ['Descargas'];
 
 export default handler;
-
-function parseDuration(duration) {
-  let parts = duration.split(':').reverse();
-  return parts.reduce((total, part, index) => total + parseInt(part) * Math.pow(60, index), 0);
-}
