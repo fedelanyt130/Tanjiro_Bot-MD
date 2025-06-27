@@ -7,6 +7,7 @@ const clockString = ms => {
   return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':');
 };
 
+const imagen = "https://files.catbox.moe/x4vez4.jpg";
 
 const menuHeader = `
 ❒─「 *⚔TANJIRO-BOT⚔* 」─❒
@@ -88,56 +89,29 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
       return `╭─「 ${emoji} *${title.toUpperCase()}* 」─❒\n${entries}\n${sectionDivider}`;
     }).join('\n\n');
 
-    await conn.reply(m.chat, mensajeEspera, m, {
-    contextInfo: {
-      externalAdReply: {
-        title: botname,
-        body: "Un amor que nunca se acaba Jeje <3",
-        thumbnailUrl: `https://nightapi.is-a.dev/api/mayeditor?url=https://files.catbox.moe/xl6xgg.png&texto=¡Hola%20${encodeURIComponent(name)}!%20👻✨&textodireccion=Centro&fontsize=45&color=white&fontfamily=Comic%20Sans%20MS&shadow=true&outline=black`,
-        sourceUrl: redes,
-        mediaType: 1,
-        showAdAttribution: true,
-        renderLargerThumbnail: true,
-      }
-    }
-  })
+    const finalHeader = menuHeader
+      .replace('%name', name)
+      .replace('%level', level)
+      .replace('%exp', exp - min)
+      .replace('%max', xp)
+      .replace('%limit', limit)
+      .replace('%mode', mode)
+      .replace('%uptime', uptime)
+      .replace('%total', totalreg);
 
-  // Lista de videos temáticos para más variedad
-  let videosHanako = [
-    'https://files.catbox.moe/3l3h3e.mp4',
-    // Puedes agregar más URLs de videos aquí
-  ]
-  let videoSeleccionado = videosHanako[Math.floor(Math.random() * videosHanako.length)]
+    const fullMenu = `${finalHeader}\n\n${menuBody}\n\n${menuFooter}`;
 
-  // Enviar menú con video
-  await conn.sendMessage(m.chat, {
-    video: { url: videoSeleccionado, gifPlayback: true },
-    caption: menuText,
-    gifPlayback: true,
-    contextInfo: {
-      mentionedJid: [m.sender, userId],
-      isForwarded: true,
-      forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363392482966489@newsletter',
-        newsletterName: 'fede x Tanjio',
-        serverMessageId: -1,
-      },
-      forwardingScore: 999,
-      externalAdReply: {
-        title: botname,
-        body: "Un amor que nunca se acaba Jeje <3",
-        thumbnailUrl: banner,
-        sourceUrl: redes,
-        mediaType: 1,
-        showAdAttribution: true,
-        renderLargerThumbnail: true,
-      },
-    }
-  }, { quoted: m })
-}
+    await conn.sendMessage(m.chat, {
+      image: { url: imagen },
+      caption: fullMenu,
+      mentions: [m.sender]
+    }, { quoted: m });
 
-handler.help = ['menu']
-handler.tags = ['main']
-handler.command = ['menu', 'help']
+  } catch (e) {
+    console.error(e);
+    conn.reply(m.chat, '⚠️ Ocurrió un error al generar el menú. Por favor, inténtalo de nuevo más tarde o contacta al soporte.', m); // Removed rcanal here
+  }
+};
+handler.command = ['menu', 'help', 'menú'];
 
-export default handler
+export default handler;
