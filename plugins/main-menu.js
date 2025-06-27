@@ -18,7 +18,7 @@ const menuHeader = `
 `.trim();
 
 // Divisor de sección
-const sectionDivider = '╰────────────────╯';
+const sectionDivider = '╰────────────────❒';
 
 // Pie de página del menú
 const menuFooter = `
