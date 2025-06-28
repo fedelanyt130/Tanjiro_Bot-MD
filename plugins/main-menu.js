@@ -254,10 +254,10 @@ let totalf = Object.values(global.plugins).reduce((total, plugin) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
   let img = [ 
-    'https://i.ibb.co/YDGYRhx/file.jpg',
-    'https://i.ibb.co/T0qNJ1f/file.jpg',
-    'https://i.ibb.co/gdxsw9Y/file.jpg',
-    'https://i.ibb.co/wpJJcG0/file.jpg'
+    'https://files.catbox.moe/x4vez4.jpg',
+    'https://files.catbox.moe/x4vez4.jpg',
+    'https://files.catbox.moe/x4vez4.jpg',
+    'https://files.catbox.moe/x4vez4.jpg'
   ].getRandom()
 
     await m.react('🤍')
