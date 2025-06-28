@@ -113,6 +113,5 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
   }
 };
 handler.command = ['menu', 'help', 'menú'];
-await m.react('🤍')
 
 export default handler;
