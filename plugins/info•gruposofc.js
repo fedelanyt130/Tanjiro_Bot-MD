@@ -22,7 +22,6 @@ let handler = async (m, { conn }) => {
 │ 
 ╰─────────────────
 `
-
   await conn.sendFile(m.chat, catalogo, 'grupos.jpg', grupos.trim(), m)
   await m.react(emojis)
 }
