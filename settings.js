@@ -38,9 +38,9 @@ global.image = fs.readFileSync('./src/img/imagen.jpg')
 global.avatar = fs.readFileSync('./src/img/avatar_contact.jpg')
 
 global.repobot = 'https://github.com/federico130/tanjiro.git'
-global.grupo = 'https://chat.whatsapp.com/IFon3fQibUtKGENnSKEWkk'
-global.comu = 'https://chat.whatsapp.com/K0534XyhiHp3vm49GxKcC0'
-global.channel = 'https://whatsapp.com/channel/0029Vb3Grj27oQhbX4Bk0u1g'
+global.grupo = 'https://chat.whatsapp.com/Db2iUOFmASuDgVlLPU2tAd'
+global.comu = 'https://chat.whatsapp.com/GgPP07cL54iL6C1lrwX0fz'
+global.channel = 'https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N'
 
 global.cheerio = cheerio
 global.fs = fs
