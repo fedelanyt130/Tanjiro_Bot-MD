@@ -73,6 +73,6 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
 handler.command = ['play', 'playaudio'];
 handler.help = ['play <texto>', 'playaudio <texto>'];
-handler.tags = ['media'];
+handler.tags = ['Descargas'];
 
 export default handler;
