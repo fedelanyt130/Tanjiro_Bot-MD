@@ -27,14 +27,14 @@ const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJp
 const defaultMenu = {
   before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
 
-"❏ ¡Hola! *%name* %greeting, *Soy Tanjiro_Bot*"
+"❏ ¡Hola! *%name* %greeting, *ꜱᴏʏ ᴛᴀɴᴊɪʀᴏ-ʙᴏᴛ ⚔*"
 
-━━━━❏ *𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓* ❏━━━━━
-❏ 👤 *Cliente:* %name
-❏ 🔱 *Modo:* Público
-❏ ✨ *Baileys:* Multi Device
-❏ 🪐 *Tiempo Activo:* %muptime
-❏ 💫 *Usuarios:* %totalreg 
+━━━━❏ *INFO - BOT* ❏━━━━━
+❏ *Cliente:* %name
+❏ *Modo:* Público
+❏ *Baileys:* Multi Device
+❏ *Tiempo Activo:* %muptime
+❏ *Usuarios:* %totalreg 
 ╚━━━━━━━━━━━━━
 %readmore
 
