@@ -163,7 +163,7 @@ let img = 'https://files.catbox.moe/x4vez4.jpg'; // valiendo vrg con los links
           },
           forwardingScore: 999,
           externalAdReply: {
-              title: ,
+              title: botName,
               body: dev,
               thumbnailUrl: img,
               sourceUrl: redes,
