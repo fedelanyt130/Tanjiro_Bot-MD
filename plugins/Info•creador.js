@@ -36,7 +36,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     const imageUrl = 'https://qu.ax/KdnAO.jpg';
 
     // Texto personalizado para el reply
-    const dev = Developed: ${ownerName}`;
+    const dev = 'Developed: ${ownerName}`;
     const txt = `⚔ Dueño y creador: ${ownerName}\n📞 Número: +${ownerNumber}`;
 
     await conn.sendMessage(m.chat, {
