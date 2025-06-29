@@ -159,8 +159,8 @@ let img = 'https://raw.githubusercontent.com/WillZek/CrowBot-ST/main/media/catal
           mentionedJid: [m.sender],
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
-              newsletterJid: channelRD.id,
-              newsletterName: channelRD.name,
+              newsletterJid: false,
+              newsletterName: false,
               serverMessageId: -1,
           },
           forwardingScore: 999,
