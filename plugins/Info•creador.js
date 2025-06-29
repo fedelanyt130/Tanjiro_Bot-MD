@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, usedPrefix, text, args, command }) => {
-    await m.react('💻');
+    await m.react('👑');
 
     if (!['owner', 'creator', 'creador', 'dueño'].includes(command.toLowerCase())) {
         return conn.sendMessage(m.chat, { text: `El comando ${command} no existe.` });
@@ -13,11 +13,10 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     let username = await conn.getName(m.sender);
 
     // Info del dueño actualizada
-    const ownerName = 'fede.xyz';
-    const ownerNumber = '5491156178758';
-    const ownerEmail = 'fedelanyt20@gmail.com';
-    const ownerInstagram = 'nada';
-    const ownerRegion = 'Argentina';
+    const ownerName = 'Wirk';
+    const ownerNumber = '5491156178758@s.whatsapp.net';
+    const ownerEmail = 'ninopina10@gmail.com';
+    const ownerRegion = 'Honduras';
 
     // VCARD con datos actualizados
     let list = [{
@@ -26,9 +25,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
             `item1.TEL;waid=${ownerNumber}:${ownerNumber}\n` +
             `item1.X-ABLabel:Número\n` +
             `item2.EMAIL;type=INTERNET:${ownerEmail}\n` +
-            `item2.X-ABLabel:Email\n` +
-            `item3.URL:${ownerInstagram}\n` +
-            `item3.X-ABLabel:Instagram\n` +
+            `item2.X-ABLabel:Email\n`
             `item4.ADR:;; ${ownerRegion};;;;\n` +
             `item4.X-ABLabel:Región\nEND:VCARD`,
     }];
@@ -36,8 +33,8 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     const imageUrl = 'https://qu.ax/KdnAO.jpg';
 
     // Texto personalizado para el reply
-    const dev = 'Developed: ${ownerName}`;
-    const txt = `⚔ Dueño y creador: ${ownerName}\n📞 Número: +${ownerNumber}`;
+    const dev = `Desarrollador: ${ownerName}`;
+    const txt = `✨ Dueño y creador: ${ownerName}\n📞 Número: +${ownerNumber}`;
 
     await conn.sendMessage(m.chat, {
         contacts: {
@@ -46,11 +43,9 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         },
         contextInfo: {
             externalAdReply: {
-                showAdAttribution: false,
-                title: 'һ᥆ᥣᥲ ᥴ᥆ᥒ𝗍ᥲᥴ𝗍᥆ ძᥱ mі ᥴrᥱᥲძ᥆r 💖',
-                body: dev,
-                thumbnailUrl: imageUrl,
-                sourceUrl: 'https://qu.ax/KdnAO.jpg',
+                showAdAttribution: true,
+                title: 'һ᥆ᥣᥲ ᥴ᥆ᥒ𝗍ᥲᥴ𝗍᥆ ძᥱ mі ᥴrᥱᥲძ᥆r👑',
+                body: dev,       
                 mediaType: 1,
                 renderLargerThumbnail: true
             }
