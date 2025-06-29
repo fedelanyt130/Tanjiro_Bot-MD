@@ -163,7 +163,7 @@ let img = 'https://raw.githubusercontent.com/WillZek/CrowBot-ST/main/media/catal
           },
           forwardingScore: 999,
           externalAdReply: {
-              title: false,
+              title: 乂 ꜱᴛᴀʀʟɪɢʜᴛ ᴄʀᴇᴡ乂,
               body: dev,
               thumbnailUrl: img,
               sourceUrl: redes,
