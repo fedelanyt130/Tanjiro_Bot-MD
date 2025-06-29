@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     const ownerNumber = '5491156178758';
     const ownerEmail = 'fedelanyt20@gmail.com';
     const ownerInstagram = 'nada';
-    const ownerRegion = 'Honduras';
+    const ownerRegion = 'Argentina';
 
     // VCARD con datos actualizados
     let list = [{
@@ -37,7 +37,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 
     // Texto personalizado para el reply
     const dev = `Desarrollador: ${ownerName}`;
-    const txt = `✨ Dueño y creador: ${ownerName}\n📞 Número: +${ownerNumber}`;
+    const txt = `⚔ Dueño y creador: ${ownerName}\n📞 Número: +${ownerNumber}`;
 
     await conn.sendMessage(m.chat, {
         contacts: {
@@ -46,7 +46,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         },
         contextInfo: {
             externalAdReply: {
-                showAdAttribution: true,
+                showAdAttribution: false,
                 title: 'һ᥆ᥣᥲ ᥴ᥆ᥒ𝗍ᥲᥴ𝗍᥆ ძᥱ mі ᥴrᥱᥲძ᥆r 💖',
                 body: dev,
                 thumbnailUrl: imageUrl,
