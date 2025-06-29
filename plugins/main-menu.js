@@ -40,7 +40,7 @@ const defaultMenu = {
 
 \t*(✰◠‿◠) COMANDOS ⚔*   
 `.trimStart(),
-  header: '━━━━━━\n⚔ %category \n━━━━━━',
+  header: '━━━━━━━━━\n⚔ %category \n━━━━━━━━━',
   body: '*⚔* %cmd',
   footer: '┗\n',
   after: `> ${dev}`,
