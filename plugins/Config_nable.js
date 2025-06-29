@@ -248,29 +248,29 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     default:
       if (!/[01]/.test(command)) return conn.reply(m.chat, `
 
-*🍃 Funciones para el creador del bot*
+*⚔ Funciones para el creador del bot ⚔*
 
-*${usedPrefix + command} status* 🌙
-*${usedPrefix + command} restrict* 🌙
-*${usedPrefix + command} autoread* 🌙
-*${usedPrefix + command} antiprivado* 🌙
-*${usedPrefix + command} subbots* 🌙
-*______________________________________*
+乂 *${usedPrefix + command} status* 🌙
+乂 *${usedPrefix + command} restrict* 🌙
+乂 *${usedPrefix + command} autoread* 🌙
+乂 *${usedPrefix + command} antiprivado* 🌙
+乂 *${usedPrefix + command} subbots* 🌙
+*⚔__________________________________⚔*
 
-*🍃 Funciones de grupos*
+*⚔ Funciones de grupos ⚔*
 
-*${usedPrefix + command} reaccion* 🌙
-*${usedPrefix + command} antitraba* 🌙
-*${usedPrefix + command} modoadmin* 🌙
-*${usedPrefix + command} antiarabes* 🌙
-*${usedPrefix + command} autoread* 🌙
-*${usedPrefix + command} antiver* 🌙
-*${usedPrefix + command} detect* 🌙
-*${usedPrefix + command} delete* 🌙
-*${usedPrefix + command} nsfw* 🌙
-*${usedPrefix + command} welcome* 🌙
-*${usedPrefix + command} antibot* 🌙
-*${usedPrefix + command} antilink* 🌙`, m, )
+乂 *${usedPrefix + command} reaccion* 🌙
+乂 *${usedPrefix + command} antitraba* 🌙
+乂 *${usedPrefix + command} modoadmin* 🌙
+乂 *${usedPrefix + command} antiarabes* 🌙
+乂 *${usedPrefix + command} autoread* 🌙
+乂 *${usedPrefix + command} antiver* 🌙
+乂 *${usedPrefix + command} detect* 🌙
+乂 *${usedPrefix + command} delete* 🌙
+乂 *${usedPrefix + command} nsfw* 🌙
+乂 *${usedPrefix + command} welcome* 🌙
+乂 *${usedPrefix + command} antibot* 🌙
+乂 *${usedPrefix + command} antilink* 🌙`, m, )
       throw false
   }
   conn.reply(m.chat, `🍃 La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para este Bot' : isUser ? '' : 'para este chat'}`, m, )
