@@ -7,26 +7,29 @@ const clockString = ms => {
   return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':');
 };
 
-const imagen = "https://files.catbox.moe/1syk2a.jpg";
+const imagen = "https://files.catbox.moe/ltq7ph.jpg";
 
 const menuHeader = `
-❒─「 *⚔TANJIRO-BOT⚔* 」─❒
-❒ 👤 *Nombre:* %name
-❒ ⏱️ *Uptime:* %uptime
-❒ 🌍 *Usuarios:* %total
-
+╭─❒ 「 *📍 BARBOZA MD* 」
+│ 👤 *Nombre:* %name
+│ 🎖 *Nivel:* %level | *XP:* %exp/%max
+│ 🔓 *Límite:* %limit | *Modo:* %mode
+│ ⏱️ *Uptime:* %uptime
+│ 🌍 *Usuarios:* %total
+│ 🤖 *Bot optimizado para mejor rendimiento.*
+╰❒
 `.trim();
 
 // Divisor de sección
-const sectionDivider = '╰────────────────❒';
+const sectionDivider = '╰─────────────────╯';
 
 // Pie de página del menú
 const menuFooter = `
-❒─「 * INFO FINAL* 」─❒
-❒ ⚔ *Usa los comandos con el prefijo correspondiente.*
+╭─❒ 「 *📌 INFO FINAL* 」
+│ ⚠️ *Usa los comandos con el prefijo correspondiente.*
 
-> Creado por fede
-╰──────────❒
+> Creado por Barboza-Team
+╰❒
 `.trim();
 
 let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter here
@@ -59,13 +62,12 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
       });
 
     const emojis = {
-      anime: "💖",
+      anime: "🎭",
       info: "ℹ️",
       search: "🔎",
-      game: "🎮",
       diversión: "🎉",
       subbots: "🤖",
-      rpg: "✨",
+      rpg: "🌀",
       registro: "📝",
       sticker: "🎨",
       imagen: "🖼️",
@@ -77,16 +79,15 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
       nsfw: "🔞",
       "base de datos": "📀",
       audios: "🔊",
-      avanzado: "🗝️",
       "free fire": "🔥",
       otros: "🪪"
     };
 
     const menuBody = Object.entries(categorizedCommands).map(([title, cmds]) => {
       const cleanTitle = title.toLowerCase().trim();
-      const emoji = emojis[cleanTitle] || "⚔";
-      const entries = [...cmds].map(cmd => `│ ⚔ _${_p}${cmd}_`).join('\n');
-      return `╭─「 ${emoji} *${title.toUpperCase()}* 」─❒\n${entries}\n${sectionDivider}`;
+      const emoji = emojis[cleanTitle] || "📁";
+      const entries = [...cmds].map(cmd => `│ ◦ _${_p}${cmd}_`).join('\n');
+      return `╭─「 ${emoji} *${title.toUpperCase()}* 」\n${entries}\n${sectionDivider}`;
     }).join('\n\n');
 
     const finalHeader = menuHeader
