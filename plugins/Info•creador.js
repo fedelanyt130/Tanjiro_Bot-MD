@@ -13,9 +13,10 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     let username = await conn.getName(m.sender);
 
     // Info del dueño actualizada
-    const ownerName = 'Wirk';
-    const ownerNumber = '5491156178758@s.whatsapp.net';
-    const ownerEmail = 'ninopina10@gmail.com';
+    const ownerName = 'fede.xyz';
+    const ownerNumber = '5481156178757';
+    const ownerEmail = 'fedelanyt20@gmail.com';
+    const ownerInstagram = 'https://www.instagram.com/crowbot_wa';
     const ownerRegion = 'Honduras';
 
     // VCARD con datos actualizados
@@ -25,7 +26,9 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
             `item1.TEL;waid=${ownerNumber}:${ownerNumber}\n` +
             `item1.X-ABLabel:Número\n` +
             `item2.EMAIL;type=INTERNET:${ownerEmail}\n` +
-            `item2.X-ABLabel:Email\n`
+            `item2.X-ABLabel:Email\n` +
+            `item3.URL:${ownerInstagram}\n` +
+            `item3.X-ABLabel:Instagram\n` +
             `item4.ADR:;; ${ownerRegion};;;;\n` +
             `item4.X-ABLabel:Región\nEND:VCARD`,
     }];
@@ -45,7 +48,9 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
             externalAdReply: {
                 showAdAttribution: true,
                 title: 'һ᥆ᥣᥲ ᥴ᥆ᥒ𝗍ᥲᥴ𝗍᥆ ძᥱ mі ᥴrᥱᥲძ᥆r👑',
-                body: dev,       
+                body: dev,
+                thumbnailUrl: imageUrl,
+                sourceUrl: 'https://github.com/WillZek',
                 mediaType: 1,
                 renderLargerThumbnail: true
             }
