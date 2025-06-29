@@ -27,7 +27,7 @@ const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJp
 const defaultMenu = {
   before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
 
-"「💛」 ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
+"❏ ¡Hola! *%name* %greeting, *Soy Tanjiro_Bot*"
 
 ━━━━❏ *𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓* ❏━━━━━
 ❏ 👤 *Cliente:* %name
@@ -149,7 +149,7 @@ await m.react(emojis)
 /* await conn.sendMessage(m.chat, { video: { url: vid }, caption: text.trim(), contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1, }, forwardingScore: 999, externalAdReply: { title: textbot, body: dev, thumbnailUrl: 'https://qu.ax/kJBTp.jpg', sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false,
 }, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null }) */
 
-let img = 'https://files.catbox.moe/x4vez4.jpg'; // valiendo vrg con los links
+let img = 'https://files.catbox.moe/1syk2a.jpg'; // valiendo vrg con los links
 
   await conn.sendMessage(m.chat, { 
       text: text.trim(),
