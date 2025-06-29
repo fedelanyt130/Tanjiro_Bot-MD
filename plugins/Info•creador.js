@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, usedPrefix, text, args, command }) => {
-    await m.react('👑');
+    await m.react('⚘');
 
     if (!['owner', 'creator', 'creador', 'dueño'].includes(command.toLowerCase())) {
         return conn.sendMessage(m.chat, { text: `El comando ${command} no existe.` });
@@ -14,10 +14,10 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 
     // Info del dueño actualizada
     const ownerName = 'fede.xyz';
-    const ownerNumber = '5481156178757';
+    const ownerNumber = '5491156178758';
     const ownerEmail = 'fedelanyt20@gmail.com';
-    const ownerInstagram = 'https://www.instagram.com/crowbot_wa';
-    const ownerRegion = 'Honduras';
+    const ownerInstagram = 'nada';
+    const ownerRegion = 'Argentina';
 
     // VCARD con datos actualizados
     let list = [{
