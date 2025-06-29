@@ -29,7 +29,7 @@ const defaultMenu = {
 
 "❏ ¡Hola! *%name* %greeting, *ꜱᴏʏ ᴛᴀɴᴊɪʀᴏ-ʙᴏᴛ ⚔*"
 
-━━━━❏ *INFO - BOT* ❏━━━━━
+━━━❏ *INFO - BOT* ❏━━━
 ❏ *Cliente:* %name
 ❏ *Modo:* Público
 ❏ *Baileys:* Multi Device
