@@ -4,23 +4,23 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'crow': '👑「 *`MENUS CROWBOT`* 」👑',
-  'main': '「INFO」🍨',
-  'buscador': '「BUSQUEDAS」🍨',
-  'fun': '「JUEGOS」🍨',
-  'serbot': '「SUB BOTS」🍨',
-  'rpg': '「RPG」🍨',
-  'rg': '「REGISTRO」🍨',
-  'sticker': '「STICKERS」🍨',
-  'emox': '「ANIMES」🍨',
-  'database': '「DATABASE」🍨',
-  'grupo': '「GRUPOS」🍨',
-  'nable': '「ON / OFF」', 
-  'descargas': '「DESCARGAS」🍨',
-  'tools': '「HERRAMIENTAS」🍨',
-  'info': '「INFORMACIÓN」🍨',
-  'owner': '「CREADOR」🍨',
-  'logos': '「EDICION LOGOS」🍨', 
+  'crow': '「 *`MENUS`* 」',
+  'main': '「INFO」⚔',
+  'buscador': '「BUSQUEDAS」⚔',
+  'fun': '「JUEGOS」⚔',
+  'serbot': '「SUB BOTS」⚔',
+  'rpg': '「RPG」⚔',
+  'rg': '「REGISTRO」⚔',
+  'sticker': '「STICKERS」⚔',
+  'emox': '「ANIMES」⚔',
+  'database': '「DATABASE」⚔',
+  'grupo': '「GRUPOS」⚔',
+  'nable': '「ON / OFF」⚔', 
+  'descargas': '「DESCARGAS」⚔',
+  'tools': '「HERRAMIENTAS」⚔',
+  'info': '「INFORMACIÓN」⚔',
+  'owner': '「CREADOR」⚔',
+  'logos': '「EDICION LOGOS」⚔', 
 }
 
 const vid = 'https://cdnmega.vercel.app/media/dwx0CKRD@MmwtDrN7W6x4EIFtt4ss50UJpk-F2fFXJBueIW1IZR8';
@@ -38,12 +38,11 @@ const defaultMenu = {
 ✧  💫 *Usuarios:* %totalreg 
 ╚━━━━━━━━━━━━━━
 %readmore
-*✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧⋄⋆⋅⋆⋄✧*\n\n> Para Ser Un Sub Bots Usa #code para codigo de 8 dígitos y #qr para codigo qr.
 
 \t*(✰◠‿◠) 𝐂 𝐨 𝐦 𝐚 𝐧 𝐝 𝐨 𝐬*   
 `.trimStart(),
-  header: '͜ ۬︵࣪᷼⏜݊᷼⏜࣪᷼✿⃘𐇽۫ꥈ࣪࣪࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪𑁍ٜ𐇽࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪✿݊᷼⏜࣪᷼⏜࣪᷼︵۬ ͜\n┊➳ %category \n͜ ۬︵࣪᷼⏜݊᷼⏜࣪᷼✿⃘𐇽۫ꥈ࣪࣪࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪𑁍ٜ𐇽࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪✿݊᷼⏜࣪᷼⏜࣪᷼︵۬ ͜',
-  body: '*┃⏤͟͟͞͞🍭➤›* %cmd',
+  header: '━━━━\n⚔ %category ⚔\n━━━━',
+  body: '*⚔* %cmd',
   footer: '*┗━*\n',
   after: `> ${dev}`,
 }
