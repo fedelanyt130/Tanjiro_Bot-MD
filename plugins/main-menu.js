@@ -30,11 +30,11 @@ const defaultMenu = {
 "❏Hola! *%name* %greeting, *ꜱᴏʏ ᴛᴀɴᴊɪʀᴏ-ʙᴏᴛ ⚔*"
 
 ━━━❏ *INFO - BOT* ❏━━━
-❏ *Cliente:* %name
-❏ *Modo:* Público
-❏ *Baileys:* Multi Device
-❏ *Tiempo Activo:* %muptime
-❏ *Usuarios:* %totalreg 
+❏ 👤 *Cliente:* %name
+❏ 💻 *Modo:* Público
+❏ ⚔ *Baileys:* Multi Device
+❏ ⏱ *Tiempo Activo:* %muptime
+❏ 👥 *Usuarios:* %totalreg 
 ╚━━━━━━━━━━━━━
 %readmore
 
