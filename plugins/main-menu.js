@@ -30,20 +30,20 @@ const defaultMenu = {
 
 "「💛」 ¡Hola! *%name* %greeting, Para Ver Tu Perfil Usa *#perfil* ❒"
 
-╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓⊰*
-✦  👤 *Cliente:* %name
-✦  🔱 *Modo:* Público
-✧  ✨ *Baileys:* Multi Device
-✦  🪐 *Tiempo Activo:* %muptime
-✧  💫 *Usuarios:* %totalreg 
-╚━━━━━━━━━━━━━━
+━━━━❏ *𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓* ❏━━━━━
+❏ 👤 *Cliente:* %name
+❏ 🔱 *Modo:* Público
+❏ ✨ *Baileys:* Multi Device
+❏ 🪐 *Tiempo Activo:* %muptime
+❏ 💫 *Usuarios:* %totalreg 
+╚━━━━━━━━━━━━━
 %readmore
 
-\t*(✰◠‿◠) 𝐂 𝐨 𝐦 𝐚 𝐧 𝐝 𝐨 𝐬*   
+\t*(✰◠‿◠) COMANDOS ⚔*   
 `.trimStart(),
   header: '━━━━\n⚔ %category ⚔\n━━━━',
   body: '*⚔* %cmd',
-  footer: '*┗━*\n',
+  footer: '┗━\n',
   after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
