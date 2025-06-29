@@ -36,8 +36,8 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     const imageUrl = 'https://qu.ax/KdnAO.jpg';
 
     // Texto personalizado para el reply
-    const dev = `Desarrollador: ${ownerName}`;
-    const txt = `⚔ creador del bot: ${ownerName}\n⚔ Número: +${ownerNumber}`;
+    const dev = 'Creador: ${ownerName}`;
+    const txt = `⚔ creador del bot: ${ownerName}\n📞 Número: +${ownerNumber}`;
 
     await conn.sendMessage(m.chat, {
         contacts: {
@@ -47,7 +47,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         contextInfo: {
             externalAdReply: {
                 showAdAttribution: true,
-                title: 'һ᥆ᥣᥲ ᥴ᥆ᥒ𝗍ᥲᥴ𝗍᥆ ძᥱ mі ᥴrᥱᥲძ᥆r👑',
+                title: 'һ᥆ᥣᥲ ᥴ᥆ᥒ𝗍ᥲᥴ𝗍᥆ ძᥱ mі ᥴrᥱᥲძ᥆r ⚔',
                 body: dev,
                 thumbnailUrl: imageUrl,
                 sourceUrl: 'https://github.com/WillZek',
