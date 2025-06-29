@@ -33,10 +33,10 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
             `item4.X-ABLabel:Región\nEND:VCARD`,
     }];
 
-    const imageUrl = 'https://files.catbox.moe/x4vez4.jpg';
+    const imageUrl = 'https://qu.ax/KdnAO.jpg';
 
     // Texto personalizado para el reply
-    const dev = `Desarrollador: ${ownerName}`;
+    const dev = Developed: ${ownerName}`;
     const txt = `⚔ Dueño y creador: ${ownerName}\n📞 Número: +${ownerNumber}`;
 
     await conn.sendMessage(m.chat, {
@@ -50,7 +50,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
                 title: 'һ᥆ᥣᥲ ᥴ᥆ᥒ𝗍ᥲᥴ𝗍᥆ ძᥱ mі ᥴrᥱᥲძ᥆r 💖',
                 body: dev,
                 thumbnailUrl: imageUrl,
-                sourceUrl: 'https://files.catbox.moe/x4vez4.jpg',
+                sourceUrl: 'https://qu.ax/KdnAO.jpg',
                 mediaType: 1,
                 renderLargerThumbnail: true
             }
