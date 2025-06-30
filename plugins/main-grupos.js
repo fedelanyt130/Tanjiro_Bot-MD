@@ -2,12 +2,13 @@ import fetch from 'node-fetch';
 
 let handler = async (m, { conn, usedPrefix, command }) => {
     let grupos = "*Hola!, te invito a unirte a los grupos oficiales del Bot para convivir con la comunidad* ⭐\n\n" +
-                 "1- *Starlight:*\n" +
-                 "*🔮* https://chat.whatsapp.com/FoVnxJ64gYV6EZcfNVQUfJ" +
+                 "1- Starlight\n" +
+                 "*✰* https://chat.whatsapp.com/FoVnxJ64gYV6EZcfNVQUfJ?mode=r_t" +
                  "*─ׄ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ*\n\n" +
-                 "➠ Enlace oficiales! \n\n" +
-                 "⚔ *Canal* :\n" +
-                 "*🔮* https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31" +
+                 "➠ Enlace anulado? entre aquí! \n\n" +
+                 "⚔ Canal :\n" +
+                 "*✰* https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31" +
+                  "> By fede.xyz";
 
     // Asegúrate de definir 'imagen2' correctamente antes de usarlo
     let imagen2 = 'https://files.catbox.moe/1syk2a.jpg';
