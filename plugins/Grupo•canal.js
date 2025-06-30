@@ -9,7 +9,7 @@ let yaNotificados = new Set(
 );
 
 const enviarAvisoCanal = async (conn, notifyChat = null) => {
-  const mensaje = `⭐ *¡Te invitamos a nuestro canal!* 🌟\n\nEste es el canal oficial 📢 de *Barboza*:\n\n👉 https://whatsapp.com/channel/0029Vaua0ZD3gvWjQaIpSy18\n\nSíguelo para estar al tanto de *comandos, novedades y actualizaciones*. ¡Gracias por tu apoyo! 🙌`;
+  const mensaje = `⚔ *¡Te invitamos a nuestro canal!* ⚔\n\nEste es el canal oficial 📢 de *fede.xyz*:\n\n👉 https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31\n\nSíguelo para estar al tanto de *comandos, novedades*. ¡Gracias por tu apoyo! 🙌`;
 
   const chats = Object.entries(conn.chats).filter(([jid, chat]) => jid && chat.isChats);
   let usuarios = [];
@@ -34,10 +34,10 @@ const enviarAvisoCanal = async (conn, notifyChat = null) => {
 
   fs.writeFileSync(archivoRegistro, JSON.stringify([...yaNotificados], null, 2));
 
-  let resumen = `✅ *Mensaje del canal enviado correctamente*\n\n📨 Total: ${usuarios.length + grupos.length} nuevos chats\n👤 Usuarios: ${usuarios.length}\n👥 Grupos: ${grupos.length}\n\n`;
+  let resumen = `✅ *Mensaje del canal enviado correctamente*\n\n👥 Total: ${usuarios.length + grupos.length} nuevos chats\n👤 Usuarios: ${usuarios.length}\n👥 Grupos: ${grupos.length}\n\n`;
 
   if (usuarios.length) {
-    resumen += `📋 *Usuarios:*\n` + usuarios.map(u => `• wa.me/${u.replace(/[^0-9]/g, '')}`).join('\n') + '\n\n';
+    resumen += `👥 *Usuarios:*\n` + usuarios.map(u => `• wa.me/${u.replace(/[^0-9]/g, '')}`).join('\n') + '\n\n';
 }
 
   if (grupos.length) {
